@@ -1,0 +1,35 @@
+html, body{
+    font-size: 18px;
+}
+
+body{
+    background-color: #d8f5ff;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: #6a25ff;
+}
+
+h2{
+    color: black;
+}
+
+.nav .nav-item .nav-link {
+    margin: 0 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 0 0 5px #aaaaaa;
+}
+
+.nav .nav-item .nav-link.active,.nav .nav-pills .show > .nav-link{
+    background-color: #6a25ff;
+    color: white;
+}
+
+.outputDiv {
+    box-shadow: 0 0 5px #aaaaaa;
+}

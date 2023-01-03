@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS PART 7-8</title>
+
+    <!-- BS4 v4.6 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row ml-0">
+            <input id="numN" class="form-control w-25" placeholder="Nhập số n" type="number">
+            <button id="btnAdd" class="btn btn-info mx-3">Thêm số</button>
+        </div>
+        <div class="outputDiv alert alert-success mt-3 mb-5">
+            <i class="fa-solid fa-hand-point-right"></i> <span id="output0" class="ml-2"></span>
+        </div>
+        <ul class="nav nav-pills my-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-toggle="pill" href="#practice-1" type="button" role="tab"
+                    aria-controls="practice-1" aria-selected="true">Bài 1</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-2" type="button" role="tab"
+                    aria-controls="practice-2" aria-selected="false">Bài 2</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-3" type="button" role="tab"
+                    aria-controls="practice-3" aria-selected="false">Bài 3</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-4" type="button" role="tab"
+                    aria-controls="practice-4" aria-selected="false">Bài 4</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-5" type="button" role="tab"
+                    aria-controls="practice-5" aria-selected="false">Bài 5</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-6" type="button" role="tab"
+                    aria-controls="practice-6" aria-selected="false">Bài 6</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-7" type="button" role="tab"
+                    aria-controls="practice-7" aria-selected="false">Bài 7</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-7" type="button" role="tab"
+                    aria-controls="practice-8" aria-selected="false">Bài 8</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-7" type="button" role="tab"
+                    aria-controls="practice-9" aria-selected="false">Bài 9</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" href="#practice-7" type="button" role="tab"
+                    aria-controls="practice-10" aria-selected="false">Bài 10</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="practice-1" role="tabpanel" aria-labelledby="practice-1">
+                <h2>Tổng số dương</h2>
+                <button id="btnSum" class="btn btn-info">Tính tổng</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output1" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-2" role="tabpanel" aria-labelledby="practice-2">
+                <h2>Đếm số dương</h2>
+                <button id="btnPosNum" class="btn btn-info">Đếm số dương</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output2" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-3" role="tabpanel" aria-labelledby="practice-3">
+                <h2>Tìm số nhỏ nhất</h2>
+                <button id="btnMin" class="btn btn-info">Tìm số nhỏ nhất</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output3" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-4" role="tabpanel" aria-labelledby="practice-4">
+                <h2>Tìm số dương nhỏ nhất</h2>
+                <button id="btnMinPos" class="btn btn-info">Tìm số dương nhỏ nhất</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output4" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-5" role="tabpanel" aria-labelledby="practice-5">
+                <h2>Tìm số chẵn cuối cùng</h2>
+                <button id="btnLastEven" class="btn btn-info">Tìm số chẵn cuối cùng</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output5" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-6" role="tabpanel" aria-labelledby="practice-6">
+                <h2>Đổi vị trí hai phần tử bất kì trong mảng</h2>
+                <div class="row">
+                    <div class="col-3 form-group">
+                        <input id="firstIndex" class="form-control" type="number" placeholder="Nhập vị trí thứ nhất">
+                    </div>
+                    <div class="col-3 form-group">
+                        <input id="secondIndex" class="form-control" type="number" placeholder="Nhập vị trí thứ hai">
+                    </div>
+                </div>
+                <button id="btnSwap" class="btn btn-info">Hoán đổi</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output6" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-7" role="tabpanel" aria-labelledby="practice-7">
+                <h2></h2>
+                <div class="form-group">
+                    <input id="" class="form-control w-25" type="number" placeholder="Nhập số n">
+                </div>
+                <button id="" class="btn btn-info">In số nguyên tố</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output7" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-8" role="tabpanel" aria-labelledby="practice-8">
+                <h2></h2>
+                <div class="form-group">
+                    <input id="" class="form-control w-25" type="number" placeholder="Nhập số n">
+                </div>
+                <button id="" class="btn btn-info">In số nguyên tố</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output8" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-9" role="tabpanel" aria-labelledby="practice-9">
+                <h2></h2>
+                <div class="form-group">
+                    <input id="" class="form-control w-25" type="number" placeholder="Nhập số n">
+                </div>
+                <button id="" class="btn btn-info">In số nguyên tố</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output9" class="ml-2"></span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="practice-10" role="tabpanel" aria-labelledby="practice-10">
+                <h2></h2>
+                <div class="form-group">
+                    <input id="" class="form-control w-25" type="number" placeholder="Nhập số n">
+                </div>
+                <button id="" class="btn btn-info">In số nguyên tố</button>
+                <div class="outputDiv alert alert-success mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i> <span id="output10" class="ml-2"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JQUERY LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- BS v4.6 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- MAIN JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
