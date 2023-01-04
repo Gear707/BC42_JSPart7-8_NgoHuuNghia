@@ -143,3 +143,56 @@ queSel('#btnSwap').onclick = function () {
     // output
     queSel('#output6').innerHTML = 'Kết quả sau khi hoán đổi là: ' + result6;
 }
+
+
+/* 7. Sắp xếp tăng dần */
+queSel('#btnSort').onclick = function () {
+    // input: mảng myArray chứa các phần tử user đã nhập
+
+    // progress: dùng phương thức sort & tạo hàm so sánh phần tử để sắp xếp tăng dần
+    let sortArr = myArray.sort(function (a, b) {
+        return a - b;
+    });
+
+    // output
+    queSel('#output7').innerHTML = 'Mảng sắp xếp tăng dần: ' + sortArr;
+}
+
+
+/* 8. Tìm số nguyên tố đầu tiên trong mảng */
+// Tạo hàm kiểm tra số nguyên tố
+function checkPrimeNum(n) {
+    if (n < 2) {
+        return false;
+    }
+    else if (n === 2) {
+        return true;
+    }
+    else if (n % 2 === 0) {
+        return false;
+    }
+    for (let i = 3; i <= Math.sqrt(n); i += 2) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+queSel('#btnFirstPrimeNum').onclick = function () {
+    // input: mảng myArray chứa các phần tử user đã nhập
+
+    // progress
+    let result8 = '';
+    // duyệt mảng để tìm số nguyên tố
+    for (let index = 0; index < myArray.length; index++) {
+        let checkPN = checkPrimeNum(myArray[index]);
+        if (checkPN) {
+            result8 = 'Số nguyên tố đầu tiên: ' + myArray[index];
+            // dừng vòng lặp ngay tại thời điểm tìm thấy số nguyên tố đầu tiên
+            break;
+        }
+    }
+
+    // output
+    queSel('#output8').innerHTML = result8;
+}
