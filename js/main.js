@@ -1,3 +1,4 @@
+// Tạo hàm DOM qua selector
 function queSel(selector) {
     return document.querySelector(selector);
 }
