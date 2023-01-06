@@ -196,3 +196,53 @@ queSel('#btnFirstPrimeNum').onclick = function () {
     // output
     queSel('#output8').innerHTML = result8;
 }
+
+
+/* 9. Đếm số nguyên trong mảng */
+queSel('#btnInteger').onclick = function () {
+    // input: mảng myArray chứa các phần tử user đã nhập
+
+    // progress
+    let countInt = 0; // khai báo biến đếm số nguyên
+    for (let index = 0; index < myArray.length; index++) {
+        if (Number.isInteger(myArray[index])) {
+            countInt++;
+        }
+    }
+
+    // output
+    queSel('#output9').innerHTML = 'Số lượng các số nguyên: ' + countInt;
+}
+
+
+/* 10. So sánh số lượng số âm & số dương */
+queSel('#btnCompare').onclick = function(){
+    // input: mảng myArray chứa các phần tử user đã nhập
+
+    // progress
+    let countPos = 0; // khai báo biến đếm số dương
+    let countNeg = 0; // khai báo biến đếm số âm
+    let result10 = '';
+    // duyệt mảng để đếm số dương & số âm
+    for (let index = 0; index < myArray.length; index++) {
+        if (myArray[index] > 0) {
+            countPos++;
+        } 
+        else if (myArray[index] < 0) {
+            countNeg++;
+        }
+    }
+    // so sánh số lượng số dương & số âm
+    if (countPos > countNeg) {
+        result10 = 'Số dương > Số âm';
+    } 
+    else if (countPos < countNeg) {
+        result10 = 'Số dương < Số âm';
+    }
+    else {
+        result10 = 'Số dương = Số âm';
+    }
+
+    // output
+    queSel('#output10').innerHTML = result10;
+}
