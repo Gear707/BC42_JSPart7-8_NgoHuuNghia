@@ -76,9 +76,7 @@ queSel('#btnMinPos').onclick = function () {
 
     // progress
     // khởi tạo mảng mới chứa các số dương được lấy từ mảng ban đầu
-    let posArray = myArray.filter(function (currentValue) {
-        return (currentValue > 0);
-    })
+    let posArray = myArray.filter((currentValue) => currentValue > 0);
     let result4 = '';
     // kiểm tra mảng mới có phần tử hay không
     if (!posArray.length) {
@@ -151,9 +149,7 @@ queSel('#btnSort').onclick = function () {
     // input: mảng myArray chứa các phần tử user đã nhập
 
     // progress: dùng phương thức sort & tạo hàm so sánh phần tử để sắp xếp tăng dần
-    let sortArr = myArray.sort(function (a, b) {
-        return a - b;
-    });
+    let sortArr = myArray.sort((a, b) => a - b);
 
     // output
     queSel('#output7').innerHTML = 'Mảng sắp xếp tăng dần: ' + sortArr;
