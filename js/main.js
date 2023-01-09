@@ -10,7 +10,7 @@ queSel('#btnAdd').onclick = () => {
     let numN = +queSel('#numN').value;
 
     // progress
-    // thêm phần tử mới vào cuối mảng dựa vào giá trị user nhập vào
+    // thêm giá trị user đã nhập vào cuối mảng
     myArray.push(numN);
     // ta có thể xóa giá trị mà user đã thêm vào để tiếp tục nhập một giá trị khác
     queSel('#numN').value = '';
